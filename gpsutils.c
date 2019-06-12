@@ -15,7 +15,8 @@
 #define  _POSIX_C_SOURCE 200112L
 #endif
 
-/* strlcpy() needs _DARWIN_C_SOURCE */
+/* strlcpy() seems to need _DARWIN_C_SOURCE and/or __DARWIN_C_LEVEL */
+#define __DARWIN_C_LEVEL _POSIX_C_SOURCE
 #define _DARWIN_C_SOURCE
 
 #include <ctype.h>
